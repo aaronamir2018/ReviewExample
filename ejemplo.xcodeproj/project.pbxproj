@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		406CC0152B68A64B00C800AD /* TBSGFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0142B68A64B00C800AD /* TBSGFormViewController.swift */; };
+		406CC01B2B68A8D900C800AD /* TBSGFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC01A2B68A8D900C800AD /* TBSGFormPresenter.swift */; };
+		406CC01D2B68A97400C800AD /* TBSGFormCellsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC01C2B68A97400C800AD /* TBSGFormCellsEnum.swift */; };
+		406CC0212B68AD6000C800AD /* UITableViewCell+ReusableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0202B68AD6000C800AD /* UITableViewCell+ReusableCellProtocol.swift */; };
+		406CC0282B68AFFC00C800AD /* TBSGFormTextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0272B68AFFC00C800AD /* TBSGFormTextInputCell.swift */; };
+		406CC02D2B68BF4900C800AD /* TBSGReusableCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC02C2B68BF4900C800AD /* TBSGReusableCellProtocol.swift */; };
+		406CC02F2B68C18800C800AD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC02E2B68C18800C800AD /* UITableView.swift */; };
+		406CC0312B6B4A8200C800AD /* TBSGFormDownInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0302B6B4A8200C800AD /* TBSGFormDownInputCell.swift */; };
+		406CC0332B6B528100C800AD /* TBGSFormMultipleCaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0322B6B528100C800AD /* TBGSFormMultipleCaseCell.swift */; };
+		406CC0372B6B6D5A00C800AD /* TBSGSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406CC0362B6B6D5A00C800AD /* TBSGSelectionView.swift */; };
 		407177352B5F7D0F0015D692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177342B5F7D0F0015D692 /* AppDelegate.swift */; };
 		407177372B5F7D0F0015D692 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177362B5F7D0F0015D692 /* SceneDelegate.swift */; };
-		407177392B5F7D0F0015D692 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177382B5F7D0F0015D692 /* ViewController.swift */; };
-		4071773C2B5F7D0F0015D692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4071773A2B5F7D0F0015D692 /* Main.storyboard */; };
 		4071773E2B5F7D110015D692 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4071773D2B5F7D110015D692 /* Assets.xcassets */; };
 		407177412B5F7D110015D692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4071773F2B5F7D110015D692 /* LaunchScreen.storyboard */; };
 		4071774C2B5F7D110015D692 /* ejemploTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071774B2B5F7D110015D692 /* ejemploTests.swift */; };
 		407177562B5F7D110015D692 /* ejemploUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177552B5F7D110015D692 /* ejemploUITests.swift */; };
 		407177582B5F7D110015D692 /* ejemploUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177572B5F7D110015D692 /* ejemploUITestsLaunchTests.swift */; };
+		407177652B5F7EE90015D692 /* TBSGNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177642B5F7EE90015D692 /* TBSGNavigationViewController.swift */; };
+		407177672B5F7F5F0015D692 /* TBSGTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407177662B5F7F5F0015D692 /* TBSGTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +46,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		406CC0142B68A64B00C800AD /* TBSGFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGFormViewController.swift; sourceTree = "<group>"; };
+		406CC01A2B68A8D900C800AD /* TBSGFormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGFormPresenter.swift; sourceTree = "<group>"; };
+		406CC01C2B68A97400C800AD /* TBSGFormCellsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGFormCellsEnum.swift; sourceTree = "<group>"; };
+		406CC0202B68AD6000C800AD /* UITableViewCell+ReusableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReusableCellProtocol.swift"; sourceTree = "<group>"; };
+		406CC0272B68AFFC00C800AD /* TBSGFormTextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGFormTextInputCell.swift; sourceTree = "<group>"; };
+		406CC02C2B68BF4900C800AD /* TBSGReusableCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGReusableCellProtocol.swift; sourceTree = "<group>"; };
+		406CC02E2B68C18800C800AD /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		406CC0302B6B4A8200C800AD /* TBSGFormDownInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGFormDownInputCell.swift; sourceTree = "<group>"; };
+		406CC0322B6B528100C800AD /* TBGSFormMultipleCaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBGSFormMultipleCaseCell.swift; sourceTree = "<group>"; };
+		406CC0362B6B6D5A00C800AD /* TBSGSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGSelectionView.swift; sourceTree = "<group>"; };
 		407177312B5F7D0F0015D692 /* ejemplo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ejemplo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407177342B5F7D0F0015D692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407177362B5F7D0F0015D692 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		407177382B5F7D0F0015D692 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4071773B2B5F7D0F0015D692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4071773D2B5F7D110015D692 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		407177402B5F7D110015D692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		407177422B5F7D110015D692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		407177512B5F7D110015D692 /* ejemploUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ejemploUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		407177552B5F7D110015D692 /* ejemploUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ejemploUITests.swift; sourceTree = "<group>"; };
 		407177572B5F7D110015D692 /* ejemploUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ejemploUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		407177642B5F7EE90015D692 /* TBSGNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGNavigationViewController.swift; sourceTree = "<group>"; };
+		407177662B5F7F5F0015D692 /* TBSGTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSGTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +96,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		406CC0162B68A89800C800AD /* FormModule */ = {
+			isa = PBXGroup;
+			children = (
+				406CC0222B68AE1C00C800AD /* Cells */,
+				406CC0192B68A8C200C800AD /* Model */,
+				406CC0182B68A8BC00C800AD /* View */,
+				406CC0172B68A8AA00C800AD /* Presenter */,
+			);
+			path = FormModule;
+			sourceTree = "<group>";
+		};
+		406CC0172B68A8AA00C800AD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				406CC01A2B68A8D900C800AD /* TBSGFormPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		406CC0182B68A8BC00C800AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				406CC0142B68A64B00C800AD /* TBSGFormViewController.swift */,
+				406CC0362B6B6D5A00C800AD /* TBSGSelectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		406CC0192B68A8C200C800AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				406CC01C2B68A97400C800AD /* TBSGFormCellsEnum.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		406CC01E2B68AD2000C800AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				406CC02B2B68BF1D00C800AD /* CommonProtocols */,
+				406CC01F2B68AD3D00C800AD /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		406CC01F2B68AD3D00C800AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				406CC0202B68AD6000C800AD /* UITableViewCell+ReusableCellProtocol.swift */,
+				406CC02E2B68C18800C800AD /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		406CC0222B68AE1C00C800AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				406CC0272B68AFFC00C800AD /* TBSGFormTextInputCell.swift */,
+				406CC0302B6B4A8200C800AD /* TBSGFormDownInputCell.swift */,
+				406CC0322B6B528100C800AD /* TBGSFormMultipleCaseCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		406CC02B2B68BF1D00C800AD /* CommonProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				406CC02C2B68BF4900C800AD /* TBSGReusableCellProtocol.swift */,
+			);
+			path = CommonProtocols;
+			sourceTree = "<group>";
+		};
 		407177282B5F7D0F0015D692 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +191,12 @@
 		407177332B5F7D0F0015D692 /* ejemplo */ = {
 			isa = PBXGroup;
 			children = (
+				406CC01E2B68AD2000C800AD /* Utils */,
 				407177342B5F7D0F0015D692 /* AppDelegate.swift */,
 				407177362B5F7D0F0015D692 /* SceneDelegate.swift */,
-				407177382B5F7D0F0015D692 /* ViewController.swift */,
-				4071773A2B5F7D0F0015D692 /* Main.storyboard */,
+				407177642B5F7EE90015D692 /* TBSGNavigationViewController.swift */,
+				407177662B5F7F5F0015D692 /* TBSGTabBarViewController.swift */,
+				406CC0162B68A89800C800AD /* FormModule */,
 				4071773D2B5F7D110015D692 /* Assets.xcassets */,
 				4071773F2B5F7D110015D692 /* LaunchScreen.storyboard */,
 				407177422B5F7D110015D692 /* Info.plist */,
@@ -233,7 +327,6 @@
 			files = (
 				407177412B5F7D110015D692 /* LaunchScreen.storyboard in Resources */,
 				4071773E2B5F7D110015D692 /* Assets.xcassets in Resources */,
-				4071773C2B5F7D0F0015D692 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +351,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				407177392B5F7D0F0015D692 /* ViewController.swift in Sources */,
+				407177672B5F7F5F0015D692 /* TBSGTabBarViewController.swift in Sources */,
+				406CC0332B6B528100C800AD /* TBGSFormMultipleCaseCell.swift in Sources */,
+				407177652B5F7EE90015D692 /* TBSGNavigationViewController.swift in Sources */,
+				406CC0372B6B6D5A00C800AD /* TBSGSelectionView.swift in Sources */,
+				406CC01D2B68A97400C800AD /* TBSGFormCellsEnum.swift in Sources */,
+				406CC01B2B68A8D900C800AD /* TBSGFormPresenter.swift in Sources */,
 				407177352B5F7D0F0015D692 /* AppDelegate.swift in Sources */,
+				406CC0282B68AFFC00C800AD /* TBSGFormTextInputCell.swift in Sources */,
+				406CC0312B6B4A8200C800AD /* TBSGFormDownInputCell.swift in Sources */,
+				406CC02D2B68BF4900C800AD /* TBSGReusableCellProtocol.swift in Sources */,
+				406CC02F2B68C18800C800AD /* UITableView.swift in Sources */,
+				406CC0152B68A64B00C800AD /* TBSGFormViewController.swift in Sources */,
+				406CC0212B68AD6000C800AD /* UITableViewCell+ReusableCellProtocol.swift in Sources */,
 				407177372B5F7D0F0015D692 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +401,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4071773A2B5F7D0F0015D692 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4071773B2B5F7D0F0015D692 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4071773F2B5F7D110015D692 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,11 +538,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7MMPUSV826;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ejemplo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,11 +567,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QTP83VAVMZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ejemplo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
