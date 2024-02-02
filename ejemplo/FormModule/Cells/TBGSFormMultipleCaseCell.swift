@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TBGSFormMultipleCaseCellProtocol: AnyObject {
+    func optionSelected(id: Int)
+}
+
 class TBGSFormMultipleCaseCell: UITableViewCell {
     
     private lazy var stackView: UIStackView = {
@@ -16,6 +20,8 @@ class TBGSFormMultipleCaseCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private weak var delegate: TBGSFormMultipleCaseCellProtocol?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -40,14 +46,31 @@ class TBGSFormMultipleCaseCell: UITableViewCell {
         ])
     }
 
-    func setUpCell(withModel model: TBGSFormMultipleCaseDataModel) {
+    func setUpCell(withModel model: TBGSFormMultipleCaseDataModel, 
+                   delegate: TBGSFormMultipleCaseCellProtocol,
+                   selectedOption: [TBGSFormSelectableOption]) {
+        self.delegate = delegate
         for stackV in stackView.subviews {
             stackV.removeFromSuperview()
         }
         
         for item in model.optionsData {
-            let select = TBSGSelectionView(model: item)
+            var isSelected = true
+            if selectedOption.first(where: {$0.id == item.id}) == nil {
+                isSelected = false
+            }
+            let select = TBSGSelectionView(model: item, delegate: self, isSelected: isSelected)
             stackView.addArrangedSubview(select)
         }
+    }
+}
+
+extension TBGSFormMultipleCaseCell: TBSGSelectionViewProtocol {
+    func buttonPressed(id: Int) {
+        guard let delegate = delegate else {
+            return
+        }
+        
+        delegate.optionSelected(id: id)
     }
 }

@@ -83,8 +83,7 @@ extension TBSGFormViewController: UITableViewDataSource {
                                       withDataModel model: TBGSFormDownInputDataModel) -> UITableViewCell {
         let cell: TBSGFormDownInputCell = tableView.dequeueReusableCell(for: indexPath)
         cell.selectionStyle = .none
-        cell.delegate = self
-        cell.setUpCell(withModel: model)
+        cell.setUpCell(withModel: model, delegate: self, isOpen: presenter.cellsData.count == 2 ? false : true)
         return cell
     }
         
@@ -92,7 +91,7 @@ extension TBSGFormViewController: UITableViewDataSource {
                                           withDataModel model: TBGSFormMultipleCaseDataModel) -> UITableViewCell {
         let cell: TBGSFormMultipleCaseCell = tableView.dequeueReusableCell(for: indexPath)
         cell.selectionStyle = .none
-        cell.setUpCell(withModel: model)
+        cell.setUpCell(withModel: model, delegate: self, selectedOption: presenter.selectedOptions)
         return cell
     }
 }
@@ -109,5 +108,12 @@ extension TBSGFormViewController: TBSGFormDownInputCellProtocol {
             presenter.closeMultipleCase()
             tableView.deleteRows(at: [IndexPath(row: 2, section: 0)], with: .top)
         }
+    }
+}
+
+extension TBSGFormViewController: TBGSFormMultipleCaseCellProtocol {
+    func optionSelected(id: Int) {
+        presenter.updateSelectedOption(id: id)
+        tableView.reloadData()
     }
 }

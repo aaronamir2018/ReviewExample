@@ -48,7 +48,8 @@ class TBSGFormDownInputCell: UITableViewCell {
         return button
     }()
     
-    weak var delegate: TBSGFormDownInputCellProtocol!
+    private weak var delegate: TBSGFormDownInputCellProtocol?
+    private var isOpen: Bool = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -59,7 +60,7 @@ class TBSGFormDownInputCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     private func setUpUi() {
         contentView.addSubview(titleLabel)
         contentView.addSubview(subTitleLabel)
@@ -84,11 +85,20 @@ class TBSGFormDownInputCell: UITableViewCell {
         ])
     }
     
-    func setUpCell(withModel model: TBGSFormDownInputDataModel) {
+    func setUpCell(withModel model: TBGSFormDownInputDataModel,
+                   delegate: TBSGFormDownInputCellProtocol, isOpen: Bool) {
+        self.delegate = delegate
         titleLabel.text = model.title ?? ""
+        self.isOpen = isOpen
+        downButton.setImage(UIImage(systemName: isOpen ? "chevron.up" : "chevron.down"), for: .normal)
     }
     
     @objc func pressButton() {
+        guard let delegate = delegate else {
+            return
+        }
         delegate.buttonPressed()
+        isOpen = !isOpen
+        downButton.setImage(UIImage(systemName: isOpen ? "chevron.up" : "chevron.down"), for: .normal)
     }
 }

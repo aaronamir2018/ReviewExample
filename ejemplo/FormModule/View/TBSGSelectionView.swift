@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TBSGSelectionViewProtocol: AnyObject {
+    func buttonPressed(id: Int)
+}
+
 class TBSGSelectionView: UIView {
     
     private lazy var titleLabel: UILabel = {
@@ -30,28 +34,50 @@ class TBSGSelectionView: UIView {
         return view
     }()
     
-    init(model: TBGSFormSelectableOption) {
+    private lazy var selectionButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action:#selector(self.pressButton), for: .touchUpInside)
+        return button
+    }()
+    
+    private weak var delegate: TBSGSelectionViewProtocol?
+    private var optionId: Int!
+    
+    init(model: TBGSFormSelectableOption, 
+         delegate: TBSGSelectionViewProtocol,
+         isSelected: Bool) {
+        
         super.init(frame: CGRectZero)
+        self.delegate = delegate
         setUpView()
         setUpConstraints()
         titleLabel.text = model.title
+        optionId = model.id
+        checkView.backgroundColor = isSelected ? .blue : .white
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    private func setUpView(){
+    private func setUpView(){        
         addSubview(titleLabel)
         addSubview(checkView)
+        addSubview(selectionButton)
     }
     
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
             checkView.centerYAnchor.constraint(equalTo: centerYAnchor),
             checkView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0),
-            checkView.heightAnchor.constraint(equalToConstant: 30.0),
-            checkView.widthAnchor.constraint(equalToConstant: 30.0),
+            checkView.heightAnchor.constraint(equalToConstant: 15.0),
+            checkView.widthAnchor.constraint(equalToConstant: 15.0),
+            
+            selectionButton.centerYAnchor.constraint(equalTo: checkView.centerYAnchor),
+            selectionButton.centerXAnchor.constraint(equalTo: checkView.centerXAnchor),
+            selectionButton.heightAnchor.constraint(equalToConstant: 30.0),
+            selectionButton.widthAnchor.constraint(equalToConstant: 30.0),
             
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10.0),
             titleLabel.leadingAnchor.constraint(equalTo: checkView.trailingAnchor, constant: 10.0),
@@ -59,5 +85,13 @@ class TBSGSelectionView: UIView {
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10.0),
 
         ])
+    }
+    
+    @objc func pressButton() {
+        guard let delegate = delegate else {
+            return
+        }
+        
+        delegate.buttonPressed(id: optionId)
     }
 }
